@@ -1,15 +1,29 @@
 <div class="row">
-    <div class="col-md-3">
-        <span class="hipster img-fluid rounded"></span>
-    </div>
     
     <div class="col-md-9">
 
-        <h1 class="display-4" jhiTranslate="home.title">Open Showcase</h1>
+        <swiper [config]="config">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="../../content/images/jhipster_family_member_0_head-192.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="../../content/images/jhipster_family_member_1_head-192.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="../../content/images/jhipster_family_member_2_head-192.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="../../content/images/jhipster_family_member_3_head-192.png" />
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <!-- <div class="swiper-button-next"></div>
+            <!-- <div class="swiper-button-prev"></div> --> -->
+        </swiper>
 
-        <h1 class="display-4" jhiTranslate="home.title">Culture Fit Showcase</h1>
-
-        <h1 class="display-4" jhiTranslate="home.title">Job Fit Showcase</h1>
 
         <div [ngSwitch]="isAuthenticated()">
         

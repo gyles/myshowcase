@@ -9,3 +9,15 @@ Main page styles
   only screen and (min-resolution: 192dpi),
   only screen and (min-resolution: 2dppx) {
 }
+
+swiper {
+  height: 80%;
+  width: 80%;
+  margin: auto;
+}
+
+.swiper-slide {
+  img {
+    width: 50%;
+  }
+}

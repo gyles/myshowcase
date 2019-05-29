@@ -1,6 +1,9 @@
 {
   "home": {
     "title": "Welcome, Java Hipster!",
+    "open": "Open Showcase",
+    "culture": "Culture Fit Showcase",
+    "jobfit": "Job Fit Showcase",
     "subtitle": "This is your homepage",
     "logged": {
       "message": "You are logged in as user \"{{username}}\"."
