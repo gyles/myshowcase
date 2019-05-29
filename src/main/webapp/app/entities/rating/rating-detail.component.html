@@ -7,7 +7,8 @@
             <dl class="row-md jh-entity-details">
                 <dt><span jhiTranslate="myshowcaseApp.rating.score">Score</span></dt>
                 <dd>
-                    <span>{{rating.score}}</span>
+                    <span><star-rating size="large" [starType]="'svg'" 
+                        [rating]="rating?.score" [disabled]="true"></star-rating></span>
                 </dd>
                 <dt><span jhiTranslate="myshowcaseApp.rating.review">Review</span></dt>
                 <dd>
