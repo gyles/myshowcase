@@ -48,6 +48,16 @@
     },
     "messages": {
       "info": {
+        "rating": {
+          "interested": "Profiter de la vitrine?",
+          "submit": "Soumettez votre note maintenant!"
+        },
+        "notauthenticated": {
+          "rate": "Voulez-vous évaluer le présentateur?",
+          "signin": "Connecter",
+          "or": "ou",
+          "register": "Créer un compte"
+        },
         "authenticated": {
           "prefix": "Si vous voulez vous ",
           "link": "connecter",

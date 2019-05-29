@@ -48,6 +48,16 @@
     },
     "messages": {
       "info": {
+        "rating": {
+          "interested": "Enjoying the showcase?",
+          "submit": "Submit your rating now!"
+        },
+        "notauthenticated": {
+          "rate": "Want to rate the presenter?",
+          "signin": "Sign in",
+          "or": "or",
+          "register": "Register a new account"
+        },
         "authenticated": {
           "prefix": "If you want to ",
           "link": "sign in",
