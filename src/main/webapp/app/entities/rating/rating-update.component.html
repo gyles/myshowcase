@@ -9,7 +9,15 @@
                     <input type="text" class="form-control" id="id" name="id" formControlName="id"
                         readonly />
                 </div>
+
                 <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="myshowcaseApp.rating.score" for="field_score">Score</label>
+                    <star-rating size="large" [hoverEnabled]="true" [starType]="'svg'" [rating]="editForm.get('score').value"
+                        (starClickChange)="onClick($event)" (ratingChange)="onRatingChange($event)" 
+                        (hoverRatingChange)="onHoverRatingChange($event)"></star-rating>
+                </div>
+
+                <!-- <div class="form-group">
                     <label class="form-control-label" jhiTranslate="myshowcaseApp.rating.score" for="field_score">Score</label>
                     <input type="number" class="form-control" name="score" id="field_score"
                            formControlName="score"/>
@@ -31,11 +39,12 @@
                             This field should be a number.
                         </small>
                     </div>
-                </div>
+                </div> -->
+
                 <div class="form-group">
                     <label class="form-control-label" jhiTranslate="myshowcaseApp.rating.review" for="field_review">Review</label>
-                    <input type="text" class="form-control" name="review" id="field_review"
-                           formControlName="review"/>
+                    <textarea type="text" class="form-control" name="review" id="field_review"
+                           formControlName="review"></textarea>
                     <div *ngIf="editForm.get('review').invalid && (editForm.get('review').dirty || editForm.get('review').touched)">
                         <small class="form-text text-danger"
                                *ngIf="editForm.get('review').errors.required" jhiTranslate="entity.validation.required">

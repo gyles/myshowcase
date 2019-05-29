@@ -8,6 +8,7 @@ import { JhiAlertService } from 'ng-jhipster';
 import { IRating, Rating } from 'app/shared/model/rating.model';
 import { RatingService } from './rating.service';
 import { IUser, UserService, AccountService } from 'app/core';
+import { ClickEvent, RatingChangeEvent, HoverRatingChangeEvent } from 'angular-star-rating';
 
 @Component({
   selector: 'jhi-rating-update',
@@ -116,6 +117,23 @@ export class RatingUpdateComponent implements OnInit {
   protected onError(errorMessage: string) {
     this.jhiAlertService.error(errorMessage, null, null);
   }
+
+  onClick = ($event: ClickEvent) => {
+    console.log('onClick $event: ', $event);
+    this.editForm.controls['score'].setValue($event.rating);
+    console.log(this.editForm.get(['score']).value);
+  };
+
+  onRatingChange = ($event: RatingChangeEvent) => {
+    console.log('onRatingUpdated $event: ', $event);
+    this.editForm.controls['score'].setValue($event.rating);
+    console.log(this.editForm.get(['score']).value);
+  };
+
+  onHoverRatingChange = ($event: HoverRatingChangeEvent) => {
+    console.log('onHoverRatingChange $event: ', $event);
+    console.log(this.editForm.get(['score']).value);
+  };
 
   trackUserById(index: number, item: IUser) {
     return item.id;

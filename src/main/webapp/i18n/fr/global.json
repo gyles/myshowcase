@@ -53,7 +53,7 @@
           "submit": "Soumettez votre note maintenant!"
         },
         "notauthenticated": {
-          "rate": "Voulez-vous évaluer le présentateur?",
+          "rate": "Voulez-vous noter Gyles?",
           "signin": "Connecter",
           "or": "ou",
           "register": "Créer un compte"
