@@ -2,7 +2,15 @@
     <div class="col-md-3">
         <span class="hipster img-fluid rounded"></span>
     </div>
+    
     <div class="col-md-9">
+
+        <h1 class="display-4" jhiTranslate="home.title">Open Showcase</h1>
+
+        <h1 class="display-4" jhiTranslate="home.title">Culture Fit Showcase</h1>
+
+        <h1 class="display-4" jhiTranslate="home.title">Job Fit Showcase</h1>
+
         <div [ngSwitch]="isAuthenticated()">
         
         	<div class="alert alert-success" *ngSwitchCase="true">

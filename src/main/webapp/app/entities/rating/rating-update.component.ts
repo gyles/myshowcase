@@ -7,7 +7,7 @@ import { filter, map } from 'rxjs/operators';
 import { JhiAlertService } from 'ng-jhipster';
 import { IRating, Rating } from 'app/shared/model/rating.model';
 import { RatingService } from './rating.service';
-import { IUser, UserService } from 'app/core';
+import { IUser, UserService, AccountService } from 'app/core';
 
 @Component({
   selector: 'jhi-rating-update',
@@ -23,13 +23,14 @@ export class RatingUpdateComponent implements OnInit {
     id: [],
     score: [null, [Validators.required, Validators.min(1), Validators.max(5)]],
     review: [null, [Validators.required, Validators.maxLength(255)]],
-    user: [null, Validators.required]
+    user: [{ value: '', disabled: true }, Validators.required]
   });
 
   constructor(
     protected jhiAlertService: JhiAlertService,
     protected ratingService: RatingService,
     protected userService: UserService,
+    protected accountService: AccountService,
     protected activatedRoute: ActivatedRoute,
     private fb: FormBuilder
   ) {}
@@ -40,6 +41,7 @@ export class RatingUpdateComponent implements OnInit {
       this.updateForm(rating);
       this.rating = rating;
     });
+
     this.userService
       .query()
       .pipe(
@@ -47,6 +49,22 @@ export class RatingUpdateComponent implements OnInit {
         map((response: HttpResponse<IUser[]>) => response.body)
       )
       .subscribe((res: IUser[]) => (this.users = res), (res: HttpErrorResponse) => this.onError(res.message));
+
+    this.accountService.identity().then(account => {
+      this.userService
+        .find(account.login)
+        .pipe(
+          filter((mayBeOk: HttpResponse<IUser>) => mayBeOk.ok),
+          map((response: HttpResponse<IUser>) => response.body)
+        )
+        .subscribe(
+          (res: IUser) => {
+            this.users = [res];
+            this.editForm.controls['user'].setValue(res);
+          },
+          (res: HttpErrorResponse) => this.onError(res.message)
+        );
+    });
   }
 
   updateForm(rating: IRating) {
