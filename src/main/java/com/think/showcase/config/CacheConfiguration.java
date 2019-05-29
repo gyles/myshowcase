@@ -43,6 +43,7 @@ public class CacheConfiguration {
             createCache(cm, com.think.showcase.domain.User.class.getName());
             createCache(cm, com.think.showcase.domain.Authority.class.getName());
             createCache(cm, com.think.showcase.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.think.showcase.domain.Rating.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

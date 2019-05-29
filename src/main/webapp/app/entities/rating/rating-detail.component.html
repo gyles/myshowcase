@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="rating">
+            <h2><span jhiTranslate="myshowcaseApp.rating.detail.title">Rating</span> {{rating.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="myshowcaseApp.rating.score">Score</span></dt>
+                <dd>
+                    <span>{{rating.score}}</span>
+                </dd>
+                <dt><span jhiTranslate="myshowcaseApp.rating.review">Review</span></dt>
+                <dd>
+                    <span>{{rating.review}}</span>
+                </dd>
+                <dt><span jhiTranslate="myshowcaseApp.rating.user">User</span></dt>
+                <dd>
+                    {{rating.user?.email}}
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/rating', rating.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

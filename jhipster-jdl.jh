@@ -1,0 +1,14 @@
+entity Rating {
+	score Integer required min(1) max(5)
+	review String required maxlength(255)
+}
+
+relationship ManyToOne {
+   Rating{user(email) required} to User
+}
+
+// Set pagination options
+paginate Rating with infinite-scroll
+
+// Set service options to all
+service all with serviceImpl
