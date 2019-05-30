@@ -49,11 +49,11 @@
     "messages": {
       "info": {
         "rating": {
-          "interested": "Profiter de la vitrine?",
+          "interested": "Avez-vous aimé la vitrine?",
           "submit": "Soumettez votre note maintenant!"
         },
         "notauthenticated": {
-          "rate": "Voulez-vous noter Gyles?",
+          "rate": "Souhaitez-vous donner une note?",
           "signin": "Connecter",
           "or": "ou",
           "register": "Créer un compte"

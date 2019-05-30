@@ -49,11 +49,11 @@
     "messages": {
       "info": {
         "rating": {
-          "interested": "Enjoying the showcase?",
+          "interested": "Did you like the showcase?",
           "submit": "Submit your rating now!"
         },
         "notauthenticated": {
-          "rate": "Want to rate Gyles?",
+          "rate": "Would you like to give a rating?",
           "signin": "Sign in",
           "or": "or",
           "register": "Register a new account"
