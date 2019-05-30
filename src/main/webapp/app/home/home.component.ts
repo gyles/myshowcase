@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
 
   config: SwiperOptions = {
     autoplay: 1200000, // Autoplay option having value in milliseconds
-    initialSlide: 1, // Slide Index Starting from 0
+    initialSlide: 0, // Slide Index Starting from 0
     slidesPerView: 1, // Slides Visible in Single View Default is 1
     pagination: '.swiper-pagination', // Pagination Class defined
     paginationClickable: true, // Making pagination dots clicable
