@@ -114,7 +114,7 @@ jhipster:
         token-validity-in-seconds-for-remember-me: 2592000
   mail: # specific JHipster mail property, for standard properties see MailProperties
     from: myshowcase@localhost
-    base-url: https://anz-showcase.herokuapp.com/
+    base-url: https://anz-showcase.herokuapp.com
   metrics:
     logs: # Reports metrics in the logs
       enabled: false
