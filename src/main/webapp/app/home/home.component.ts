@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
     paginationClickable: true, // Making pagination dots clicable
     nextButton: '.swiper-button-next', // Class for next button
     prevButton: '.swiper-button-prev', // Class for prev button
-    spaceBetween: 10 // Space between each Item
+    spaceBetween: 30 // Space between each Item
   };
 
   constructor(
